@@ -3,6 +3,7 @@
 
   let canvas;
   let animId;
+  let pinEl;
   let heroEl;
   let barWrap;
   let scrollRaf;
@@ -68,17 +69,55 @@
     resize();
     draw();
 
-    // Top bar: Lenis-safe scroll-driven parallax + fade.
-    // Drifts further to the right and fades out as the hero scrolls away,
-    // so it's gone by the time About reaches the top.
+    // Scroll-driven reveal + fade for the top bar.
+    // As user scrolls: reveals L→R over first 28 vh, then drifts right and fades
+    // out over the next 60 vh so it's gone before About reaches the top.
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let barEls = [];
+
     function barTick() {
-      const rect = heroEl.getBoundingClientRect();
-      const p = Math.max(0, Math.min(1, -rect.top / (window.innerHeight * 0.6)));
-      barWrap.style.opacity = String(1 - p);
-      barWrap.style.transform = `translateX(${p * 8}%)`;
+      const pinRect  = pinEl.getBoundingClientRect();
+      const heroRect = heroEl.getBoundingClientRect();
+      const ih       = window.innerHeight;
+
+      // Reveal element-by-element as user scrolls through the pin zone.
+      if (!reducedMotion && barEls.length) {
+        const revealP    = Math.max(0, Math.min(1, -pinRect.top / ih));
+        const visible    = Math.ceil(revealP * barEls.length);
+        barEls.forEach((el, i) => {
+          // Remove inline opacity to let CSS pulse animation take over;
+          // keep '0' for not-yet-revealed elements.
+          el.style.opacity = i < visible ? '' : '0';
+        });
+      }
+
+      // Fade + drift right once the hero unsticks and starts scrolling away.
+      const fadeP = Math.max(0, Math.min(1, -heroRect.top / (ih * 0.6)));
+      barWrap.style.opacity   = String(1 - fadeP);
+      barWrap.style.transform = `translateX(${fadeP * 8}%)`;
       scrollRaf = requestAnimationFrame(barTick);
     }
     scrollRaf = requestAnimationFrame(barTick);
+
+    // Fetch and inline the SVG so individual elements are accessible.
+    // After 180° rotation the highest SVG Y maps to visual top — sort descending.
+    fetch('/assets/barra.svg')
+      .then(r => r.text())
+      .then(markup => {
+        barWrap.innerHTML = markup;
+        const svgEl = barWrap.querySelector('svg');
+        Object.assign(svgEl.style, {
+          display: 'block', width: '100%', height: 'auto',
+          transform: 'rotate(180deg)',
+        });
+        const midY = el => el.tagName === 'line'
+          ? (parseFloat(el.getAttribute('y1')) + parseFloat(el.getAttribute('y2'))) / 2
+          : parseFloat(el.getAttribute('cy'));
+        barEls = [...svgEl.querySelectorAll('line, circle')]
+          .sort((a, b) => midY(b) - midY(a));
+        if (!reducedMotion) barEls.forEach(el => { el.style.opacity = '0'; });
+      });
 
     return () => {
       cancelAnimationFrame(animId);
@@ -88,10 +127,9 @@
   });
 </script>
 
+<div class="hero-pin" bind:this={pinEl}>
 <section id="inicio" class="hero" bind:this={heroEl}>
-  <div class="barra-wrap" bind:this={barWrap}>
-    <img src="/assets/barra.svg" alt="" aria-hidden="true" class="barra" />
-  </div>
+  <div class="barra-wrap" bind:this={barWrap}></div>
 
   <canvas bind:this={canvas} class="circuit"></canvas>
 
@@ -127,11 +165,19 @@
     <span></span>
   </div>
 </section>
+</div>
 
 <style>
+  /* Tall wrapper gives scroll space while the hero is pinned.
+     120 vh of travel: reveal completes at 100 vh, 20 vh buffer before release. */
+  .hero-pin {
+    height: 220vh;
+  }
+
   .hero {
-    position: relative;
-    min-height: 100svh;
+    position: sticky;
+    top: 0;
+    height: 100svh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -140,34 +186,14 @@
 
   .barra-wrap {
     position: absolute;
-    top: 0;
+    /* Offset the SVG's transparent top strip (clipped bottom after 180° rotate):
+       116.36 / 2640.64 * 100vw ≈ 4.41vw */
+    top: -4.41vw;
     left: 0;
     width: 100%;
     z-index: 3;
     pointer-events: none;
-    /* Reveal left-to-right on entrance. JS overrides transform/opacity on scroll. */
-    clip-path: inset(0 100% 0 0);
-    animation: barra-reveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
-    will-change: transform, opacity, clip-path;
-  }
-
-  .barra {
-    display: block;
-    width: 100%;
-    height: auto;
-    transform: rotate(180deg);
-  }
-
-  @keyframes barra-reveal {
-    from { clip-path: inset(0 100% 0 0); }
-    to   { clip-path: inset(0 0 0 0); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .barra-wrap {
-      animation: none;
-      clip-path: inset(0 0 0 0);
-    }
+    will-change: transform, opacity;
   }
 
   .circuit {
@@ -188,7 +214,7 @@
   .hero-content {
     position: relative;
     z-index: 2;
-    padding-top: 6rem;
+    padding-top: 0;
     padding-bottom: 4rem;
     max-width: 760px;
   }

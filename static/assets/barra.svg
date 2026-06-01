@@ -47,6 +47,45 @@
       .cls-5 {
         stroke: #b9bece;
       }
+
+      @keyframes fl-a {
+        0%,100% { opacity: 1;   }
+        42%     { opacity: .48; }
+        47%     { opacity: .95; }
+        78%     { opacity: .6;  }
+        82%     { opacity: 1;   }
+      }
+      @keyframes fl-b {
+        0%,100% { opacity: .92; }
+        22%     { opacity: .42; }
+        27%     { opacity: .88; }
+        62%     { opacity: .55; }
+        66%     { opacity: .88; }
+      }
+      @keyframes fl-c {
+        0%,100% { opacity: .82; }
+        50%     { opacity: .38; }
+        55%     { opacity: .78; }
+      }
+      @keyframes fl-dot {
+        0%,100% { opacity: 1;   }
+        50%     { opacity: .52; }
+      }
+
+      /* Irrational durations — slow breathing, classes drift out-of-phase naturally */
+      .cls-1  { animation: fl-a    5s ease-in-out infinite; }
+      .cls-2  { animation: fl-b    7.1s ease-in-out infinite  1.8s; }
+      .cls-5  { animation: fl-c    8.7s ease-in-out infinite  3.4s; }
+      .cls-4  { animation: fl-a   11.3s ease-in-out infinite  5.9s; }
+      .cls-6  { animation: fl-dot  4.9s ease-in-out infinite; }
+      .cls-8  { animation: fl-dot  6.3s ease-in-out infinite  2.1s; }
+      .cls-10 { animation: fl-dot  9.1s ease-in-out infinite  4.4s; }
+      .cls-7  { animation: fl-dot 13.7s ease-in-out infinite  7.2s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cls-1, .cls-2, .cls-4, .cls-5,
+        .cls-6, .cls-7, .cls-8, .cls-10 { animation: none; }
+      }
     </style>
     <clipPath id="clippath">
       <rect class="cls-3" x="1159.15" y="-1159.15" width="322.33" height="2640.64" transform="translate(1159.15 1481.49) rotate(-90)"/>

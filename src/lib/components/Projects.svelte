@@ -68,7 +68,7 @@
   ];
 
   const N = projects.length;          // 7
-  const SCROLL_PER_CARD = 1200;        // px of scroll per card transition
+  const SCROLL_PER_CARD = 1300;        // px of scroll per card transition
 
   // Stack direction: top-left
   const STACK_X     = -22;   // px left per depth level
@@ -189,7 +189,7 @@
 <section
   id="proyectos"
   bind:this={section}
-  style="height: calc(100vh + {(N - 1) * SCROLL_PER_CARD}px); background: var(--bg-2);"
+  style="height: calc(100vh + {(N - 1) * SCROLL_PER_CARD}px); background: var(--bg);"
 >
   <div class="sticky-wrap">
 
@@ -387,7 +387,7 @@
   }
 
   .card-desc {
-    font-size: clamp(0.68rem, 1vw, 0.84rem);
+    font-size: clamp(0.78rem, 1.2vw, 0.98rem);
     color: rgba(255, 255, 255);
     line-height: 1.65;
     flex: 1;

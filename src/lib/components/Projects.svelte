@@ -359,17 +359,6 @@
     user-select: none;
   }
 
-  .card-num {
-    width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 50%;
-    font-size: 0.7rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
 
   .card-loc {
     font-size: 0.62rem;

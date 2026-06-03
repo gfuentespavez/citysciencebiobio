@@ -233,55 +233,6 @@
     display: block;
   }
 
-  .city-line {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .city-word {
-    font-size: clamp(3.5rem, 12vw, 8rem);
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: -0.02em;
-  }
-
-  .badge-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    margin-bottom: 0.1em;
-  }
-
-  .biobio {
-    font-size: clamp(1.5rem, 5vw, 3.2rem);
-    font-weight: 700;
-    color: var(--yellow);
-    letter-spacing: -0.01em;
-    line-height: 1;
-  }
-
-  .year-badge {
-    display: inline-block;
-    background: var(--yellow);
-    color: #0a0a0a;
-    font-size: clamp(1rem, 3vw, 2rem);
-    font-weight: 700;
-    padding: 0.1em 0.6em;
-    border-radius: 999px;
-    line-height: 1.3;
-    align-self: flex-start;
-  }
-
-  .science-word {
-    font-size: clamp(3.5rem, 12vw, 8rem);
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-
   .tagline {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: rgba(255, 255, 255, 0.7);
@@ -306,10 +257,6 @@
     gap: 0.6rem;
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.65);
-  }
-
-  .meta-icon {
-    font-size: 1rem;
   }
 
   .hero-ctas {

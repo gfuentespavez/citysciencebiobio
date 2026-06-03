@@ -204,12 +204,6 @@
     font-size: 1.2rem;
   }
 
-  .fl-mit {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.45);
-    font-weight: 500;
-  }
-
   .footer-tagline {
     font-size: 0.85rem;
     color: rgba(255,255,255,0.4);

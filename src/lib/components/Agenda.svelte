@@ -83,12 +83,6 @@
     margin-bottom: 3rem;
   }
 
-  .sub-note {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.5);
-    margin-top: 0.5rem;
-  }
-
   .days-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -199,33 +193,5 @@
 
   .day-card:hover .day-accent-line {
     opacity: 1;
-  }
-
-  /* Banner */
-  .info-banner {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    padding: 1.5rem 2rem;
-    border-radius: var(--radius-md);
-  }
-
-  .banner-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .banner-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0.4rem;
-  }
-
-  .banner-text {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.65;
   }
 </style>

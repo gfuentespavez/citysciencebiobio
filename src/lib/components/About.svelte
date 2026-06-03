@@ -267,29 +267,6 @@
     object-position: center center;
   }
 
-  .concepto-stat {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .stat-number {
-    font-family: var(--font-heading);
-    font-size: clamp(5rem, 14vw, 10rem);
-    font-weight: 700;
-    color: var(--yellow);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    color: rgba(255,255,255,0.5);
-    line-height: 1.4;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
   .concepto-place {
     font-size: 0.8rem;
     color: rgba(255,255,255,0.3);

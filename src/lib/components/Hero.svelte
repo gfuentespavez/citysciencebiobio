@@ -143,7 +143,7 @@
     <img src="https://d26q11cgz8q0ri.cloudfront.net/2026/05/28152803/logo-scaled.png" alt="City Science Biobío 2026" class="title" />
 
     <p class="tagline">
-      City Lab Biobío expone <strong>4 años de innovación</strong> en la ciudad
+      City Lab Biobío expone <strong>cuatro años de innovación</strong> en la ciudad
     </p>
 
     <div class="event-info">
@@ -155,14 +155,13 @@
       </div>
     </div>
 
-    <div class="hero-ctas">
-      <a href="#programa" class="btn-primary">Ver programa</a>
-      <a href="#proyectos" class="btn-secondary">Conocer proyectos</a>
-    </div>
   </div>
 
   <div class="scroll-hint">
-    <span></span>
+    <span class="scroll-text">Desliza para conocer nuestro evento</span>
+    <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </section>
 </div>
@@ -248,7 +247,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    margin-bottom: 2.5rem;
   }
 
   .event-meta {
@@ -259,69 +257,43 @@
     color: rgba(255, 255, 255, 0.65);
   }
 
-  .hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 2rem;
-    background: var(--yellow);
-    color: #0a0a0a;
-    font-weight: 700;
-    font-size: 0.95rem;
-    border-radius: var(--radius-full);
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .btn-primary:hover {
-    background: #ffcc00;
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 2rem;
-    background: var(--glass-bg);
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border-radius: var(--radius-full);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(12px);
-    transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  }
-
-  .btn-secondary:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--glass-border-yellow);
-    transform: translateY(-2px);
-  }
-
   .scroll-hint {
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    animation: hint-fade 3s ease-in-out infinite;
   }
 
-  .scroll-hint span {
-    display: block;
-    width: 1.5px;
-    height: 50px;
-    background: linear-gradient(to bottom, var(--yellow), transparent);
-    animation: scroll-line 2s ease-in-out infinite;
-    margin: 0 auto;
+  .scroll-text {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
   }
 
-  @keyframes scroll-line {
-    0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
-    50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-    100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+  .scroll-arrow {
+    width: 22px;
+    height: 22px;
+    color: var(--yellow);
+    animation: arrow-bounce 1.6s ease-in-out infinite;
+  }
+
+  @keyframes hint-fade {
+    0%, 100% { opacity: 0.5; }
+    50%       { opacity: 1; }
+  }
+
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(5px); }
   }
 </style>

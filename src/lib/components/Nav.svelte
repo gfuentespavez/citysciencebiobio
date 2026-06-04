@@ -95,26 +95,6 @@
     color: #ffcc05;
   }
 
-  .logo-science {
-    color: #fff;
-    font-size: 1.15rem;
-  }
-
-  .logo-badge {
-    background: var(--yellow);
-    color: #0a0a0a;
-    font-size: 0.6rem;
-    font-weight: 700;
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-  }
-
-  .logo-badge em {
-    font-style: normal;
-    font-weight: 700;
-  }
 
   .nav-links {
     display: none;
@@ -137,15 +117,15 @@
     background: rgba(255, 255, 255, 0.06);
   }
 
-  .nav-cta {
-    background: var(--yellow) !important;
-    color: #0a0a0a !important;
-    font-weight: 600 !important;
-    padding: 0.5rem 1.1rem !important;
+  .nav-links a.nav-cta {
+    background: var(--yellow);
+    color: #0a0a0a;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
   }
 
-  .nav-cta:hover {
-    background: #ffcc00 !important;
+  .nav-links a.nav-cta:hover {
+    background: #ffcc00;
   }
 
   .hamburger {

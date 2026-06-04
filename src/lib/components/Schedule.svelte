@@ -127,7 +127,7 @@
           </p>
           <p class="ov-meta" style="opacity:{elR[5]}; transform:translateY({(1-elR[5])*14}px);">16 Jun · 2026 — Concepción, Chile</p>
           <a class="ov-link" style="opacity:{elR[5]}; transform:translateY({(1-elR[5])*14}px);" href="ttps://docs.google.com/forms/d/e/1FAIpQLSeZebu6M_XhaHywPAalQmkijtbEwp1G0YHiBepzT269Yy48UA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
-            Inscribirse en la Masterclass ↗
+            Inscribirse en la Masterclass →
           </a>
         </div>
       </div>

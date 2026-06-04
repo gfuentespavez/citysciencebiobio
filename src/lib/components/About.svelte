@@ -194,6 +194,20 @@
     margin-top: -220px;
     margin-bottom: 0;
     z-index: 0;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 50%,
+      black 50%,
+      transparent 100%
+    );
+    -webkit-mask-image: -webkit-linear-gradient(
+      top,
+      transparent 0%,
+      black 50%,
+      black 50%,
+      transparent 100%
+    );
   }
 
   .quienes-image img {

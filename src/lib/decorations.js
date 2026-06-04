@@ -16,5 +16,20 @@ export const decorations = {
     direction: 'rtl',
     width: '60%',
     prerender: 0.3
+  },
+  // Same line graphic, rendered rotated 90° (see Schedule.svelte) as a
+  // vertical divider. 'ltr' sweeps top→bottom once rotated.
+  scheduleDivider: {
+    src: '/assets/lateral.svg',
+    direction: 'ltr',
+    width: '50%',
+    prerender: 0.2
+  },
+  // CLBB logo — its 17 parts reveal top→bottom on scroll.
+  clbbLogo: {
+    src: '/assets/logo-clbb02.svg',
+    direction: 'ttb',
+    width: '170px',
+    prerender: 0.15
   }
 };

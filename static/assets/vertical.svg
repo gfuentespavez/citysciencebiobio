@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250.22 118.84">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #ffcb05;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        stroke: #fa0;
+      }
+
+      .cls-4 {
+        fill: #ffcb05;
+      }
+
+      .cls-5 {
+        fill: #fa0;
+      }
+
+      .cls-6 {
+        fill: #b9bece;
+      }
+
+      .cls-3 {
+        stroke: #b9bece;
+      }
+
+      @keyframes fl-a {
+        0%,100% { opacity: 1;   }
+        42%     { opacity: .48; }
+        47%     { opacity: .95; }
+        78%     { opacity: .6;  }
+        82%     { opacity: 1;   }
+      }
+      @keyframes fl-b {
+        0%,100% { opacity: .92; }
+        22%     { opacity: .42; }
+        27%     { opacity: .88; }
+        62%     { opacity: .55; }
+        66%     { opacity: .88; }
+      }
+      @keyframes fl-dot {
+        0%,100% { opacity: 1;   }
+        50%     { opacity: .52; }
+      }
+
+      /* Irrational durations — slow breathing, classes drift out-of-phase */
+      .cls-1 { animation: fl-a    5.3s ease-in-out infinite; }
+      .cls-2 { animation: fl-b    7.1s ease-in-out infinite 1.8s; }
+      .cls-3 { animation: fl-a    8.9s ease-in-out infinite 3.1s; }
+      .cls-4 { animation: fl-dot  4.9s ease-in-out infinite; }
+      .cls-5 { animation: fl-dot  6.3s ease-in-out infinite 2.1s; }
+      .cls-6 { animation: fl-dot  9.1s ease-in-out infinite 4.4s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cls-1, .cls-2, .cls-3,
+        .cls-4, .cls-5, .cls-6 { animation: none; }
+      }
+    </style>
+  </defs>
+  <g id="decoración">
+    <g>
+      <path class="cls-2" d="M500.58,73.51c3.58,1.82,7.63,2.84,11.92,2.84h142.3"/>
+      <g>
+        <line class="cls-1" x1="1030.9" y1="55.12" x2="977.44" y2="55.12"/>
+        <line class="cls-1" x1="1247.72" y1="55.12" x2="1092.29" y2="55.12"/>
+        <line class="cls-1" x1="931.02" y1="55.12" x2="615.1" y2="55.12"/>
+        <rect class="cls-5" x="950.42" y="47.95" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(1006.34 -902.82) rotate(89.62)"/>
+        <line class="cls-2" x1="931.02" y1="55.12" x2="837.77" y2="55.12"/>
+        <rect class="cls-5" x="581.21" y="47.95" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(639.59 -533.62) rotate(89.62)"/>
+        <rect class="cls-6" x="559.65" y="47.95" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(618.17 -512.05) rotate(89.62)"/>
+      </g>
+      <g>
+        <line class="cls-2" x1="1185.52" y1="95.9" x2="945.59" y2="95.9"/>
+        <rect class="cls-6" x="894.5" y="88.68" width="14.06" height="14.06" rx="7.03" ry="7.03" transform="translate(991.25 -806.43) rotate(89.62)"/>
+        <rect class="cls-4" x="916.01" y="88.53" width="14.06" height="14.06" rx="7.03" ry="7.03" transform="translate(1012.46 -828.1) rotate(89.62)"/>
+        <line class="cls-1" x1="1203.1" y1="95.9" x2="1149.09" y2="95.9"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="1119.01" y1="76.35" x2="1207.71" y2="76.35"/>
+        <line class="cls-2" x1="1024.93" y1="76.35" x2="1098.33" y2="76.35"/>
+        <line class="cls-3" x1="755.99" y1="76.35" x2="1006.42" y2="76.35"/>
+        <line class="cls-1" x1="880.04" y1="76.35" x2="1006.42" y2="76.35"/>
+        <rect class="cls-4" x="727.68" y="69.18" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(816.08 -657.97) rotate(90.38)"/>
+        <rect class="cls-4" x="1221.33" y="69.18" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(1313.02 -1151.61) rotate(90.38)"/>
+      </g>
+      <g>
+        <line class="cls-2" x1="263.13" y1="21.41" x2="468.5" y2="21.41"/>
+        <line class="cls-3" x1="55.1" y1="21.41" x2="161.94" y2="21.41"/>
+        <rect class="cls-4" x="177.44" y="14.24" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(207.25 -163.06) rotate(90.38)"/>
+        <line class="cls-1" x1="234.17" y1="21.41" x2="307.18" y2="21.41"/>
+        <line class="cls-2" x1="36.89" y1="21.41" x2="77.7" y2="21.41"/>
+        <line class="cls-2" x1="275.9" y1="2.5" x2="342.01" y2="2.5"/>
+        <line class="cls-2" x1="621.74" y1="95.56" x2="713.15" y2="95.56"/>
+      </g>
+      <g>
+        <line class="cls-1" x1="159.69" y1="45.15" x2="313.13" y2="45.15"/>
+        <rect class="cls-5" x="130.23" y="37.42" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(182.9 -92.51) rotate(90.38)"/>
+        <rect class="cls-4" x="107.37" y="37.42" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(159.89 -69.65) rotate(90.38)"/>
+      </g>
+      <rect class="cls-6" x="329.61" y="37.42" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(383.61 -291.89) rotate(90.38)"/>
+      <g>
+        <line class="cls-3" x1="468.81" y1="20.27" x2="500.58" y2="73.51"/>
+        <rect class="cls-4" x="494.43" y="66.84" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(578.94 -427.09) rotate(90.38)"/>
+        <rect class="cls-4" x="461.99" y="13.91" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(493.36 -447.93) rotate(90.38)"/>
+      </g>
+      <line class="cls-1" x1="1228.5" y1="116.34" x2="1098.99" y2="116.34"/>
+      <line class="cls-3" x1="1078.78" y1="116.34" x2="1016.99" y2="116.34"/>
+      <line class="cls-3" x1="91.19" y1="45.18" x2="2.5" y2="45.18"/>
+      <line class="cls-3" x1="298.4" y1="68.62" x2="409.76" y2="68.62"/>
+      <line class="cls-2" x1="67.42" y1="68.62" x2="279.89" y2="68.62"/>
+      <line class="cls-1" x1="191.47" y1="68.62" x2="279.89" y2="68.62"/>
+      <rect class="cls-4" x="39.1" y="61.44" width="14.34" height="14.34" rx="7.17" ry="7.17" transform="translate(115.2 22.8) rotate(90.38)"/>
+    </g>
+  </g>
+</svg>

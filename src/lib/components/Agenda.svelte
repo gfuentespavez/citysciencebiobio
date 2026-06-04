@@ -6,7 +6,8 @@
       theme: 'Dirección política y estratégica',
       audience: 'GORE, SEREMIs, alcaldes, aliados estratégicos, academia y ecosistema regional.',
       objective: 'Presentar los proyectos del CLBB y mostrar el valor del lab como plataforma para el desarrollo territorial.',
-      accent: '#f5c518'
+      accent: '#f5c518',
+      link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBp26IefYcL3pRc88K6VaPlMAjoTXSQvZfiw47PshnFvkj6g/viewform?usp=publish-editor',
     },
     {
       day: 17,
@@ -14,7 +15,8 @@
       theme: 'Dirección ejecutiva y validación técnica',
       audience: 'SECPLAN, servicios públicos, jefaturas, analistas territoriales, encargados SIG e investigadores.',
       objective: 'Validar aplicaciones prácticas, funcionalidades y oportunidades de uso institucional de las plataformas.',
-      accent: '#4a9eff'
+      accent: '#4a9eff',
+      link: 'https://docs.google.com/forms/d/e/1FAIpQLSf5KqBz11Vk9uuXZdAHam3zBRSWGTZ1VbYDKIunogJKv6tXOA/viewform?usp=publish-editor'
     },
     {
       day: 18,
@@ -22,7 +24,8 @@
       theme: 'Academia, innovación y comunidad',
       audience: 'Universidades, ecosistema de innovación, comunicaciones, colegios, juntas de vecinos y organizaciones comunitarias.',
       objective: 'Fortalecer el relato público y acercar la plataforma a la ciudadanía desde la educación y participación territorial.',
-      accent: '#a78bfa'
+      accent: '#a78bfa',
+      link: 'https://docs.google.com/forms/d/e/1FAIpQLSejBcpBZeQ2CJNifavFoJToA4FWovg6mgjcll4OjF3eO7zV4Q/viewform?usp=publish-editor'
     }
   ];
 
@@ -34,7 +37,7 @@
   ];
 </script>
 
-<section id="agenda" class="section-padding" style="background: var(--bg-2)">
+<section id="agenda" class="section-padding" style="background: var(--bg)">
   <div class="container">
 
     <div class="header">
@@ -68,6 +71,12 @@
                 </div>
               {/each}
             </div>
+          </div>
+
+          <div class="day-footer">
+            <a class="day-cta" href={d.link} target="_blank" rel="noopener noreferrer" style="--accent: {d.accent}">
+              Inscribirse →
+            </a>
           </div>
 
           <div class="day-accent-line" style="background: {d.accent}"></div>
@@ -183,6 +192,29 @@
     font-weight: 700;
     color: #0a0a0a;
     letter-spacing: 0.02em;
+  }
+
+  .day-footer {
+    padding: 0 1.75rem 1.5rem;
+  }
+
+  .day-cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .day-cta:hover {
+    background: var(--accent);
+    color: #0a0a0a;
   }
 
   .day-accent-line {

@@ -1,8 +1,9 @@
 <script>
   import { onMount } from 'svelte';
+  import AnimatedSvg from '$lib/components/AnimatedSvg.svelte';
 
   const VIDEO_SRC = 'https://d26q11cgz8q0ri.cloudfront.net/2026/06/03181954/movilidad.mp4';
-  const VENUE_IMG = 'https://img.chilearq.com/fotos/650/2018-10-03-8919KLP6466.jpg';
+  const VENUE_IMG = 'https://d26q11cgz8q0ri.cloudfront.net/2026/06/03222713/bibliotecaudec-scaled.png';
 
   // Total px of scroll for the pinned section — matches Projects' SCROLL_PER_CARD pattern.
   const SCROLL_PX = 3200;
@@ -125,8 +126,8 @@
             decisiones urbanas y diseñar territorios más sostenibles.
           </p>
           <p class="ov-meta" style="opacity:{elR[5]}; transform:translateY({(1-elR[5])*14}px);">16 Jun · 2026 — Concepción, Chile</p>
-          <a class="ov-link" style="opacity:{elR[5]}; transform:translateY({(1-elR[5])*14}px);" href="https://www.media.mit.edu/people/naroa/overview/" target="_blank" rel="noopener noreferrer">
-            MIT Media Lab ↗
+          <a class="ov-link" style="opacity:{elR[5]}; transform:translateY({(1-elR[5])*14}px);" href="ttps://docs.google.com/forms/d/e/1FAIpQLSeZebu6M_XhaHywPAalQmkijtbEwp1G0YHiBepzT269Yy48UA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+            Inscribirse en la Masterclass ↗
           </a>
         </div>
       </div>
@@ -135,6 +136,11 @@
   </div>
 </section>
 
+<!-- Logo -->
+<div class="footer-logo">
+  <AnimatedSvg preset="clbbLogo" />
+</div>
+
 <!-- Quote + credits -->
 <div class="footer-content">
   <div
@@ -142,23 +148,14 @@
     bind:this={footerEls[0]}
     style="opacity:{footerReveals[0]}; transform: translateY({(1 - footerReveals[0]) * 16}px); filter: blur({(1 - footerReveals[0]) * 5}px);"
   >
-    <p class="fc-label">La charla</p>
     <p>
       Tecnología urbana con impacto: una mirada a cuatro años de innovación aplicada al
       Biobío, del MIT Media Lab a las plataformas de datos territoriales del CLBB.
     </p>
   </div>
 
-  <div class="fc-divider"></div>
-
-  <div
-    class="fc-credits"
-    bind:this={footerEls[1]}
-    style="opacity:{footerReveals[1]}; transform: translateY({(1 - footerReveals[1]) * 16}px); filter: blur({(1 - footerReveals[1]) * 5}px);"
-  >
-    <p>El lugar</p>
-    <p>Biblioteca Central · UdeC</p>
-    <p>Concepción, Chile</p>
+  <div class="fc-divider">
+    <AnimatedSvg preset="scheduleDivider" />
   </div>
 </div>
 
@@ -168,9 +165,10 @@
     <img src={VENUE_IMG} alt="Biblioteca Central, Universidad de Concepción" />
   </div>
   <div class="mf-label" style="opacity:{mountainLabel};">
-    <span class="mf-time">15 Jun · 18:30 h</span>
-    <span class="mf-place">Acreditación &amp; cóctel inaugural</span>
-  </div>
+    <span class="mf-time">Del 16 al 18 de junio</span>
+    <img src="https://d26q11cgz8q0ri.cloudfront.net/2026/05/28152803/logo-scaled.png" alt="City Science Biobío 2026" class="title-close" />
+    <span class="mf-time">Biblioteca UdeC</span>
+    </div>
 </div>
 
 <style>
@@ -194,7 +192,7 @@
   .media-frame {
     position: relative;
     overflow: hidden;
-    background: #000;
+    background: var(--bg);
     box-shadow: 0 40px 120px rgba(0, 0, 0, 0);
     will-change: width, height;
     flex-shrink: 0;
@@ -287,11 +285,18 @@
   }
   .ov-link:hover { background: var(--yellow); color: #0a0a0a; }
 
+  /* ── Logo ── */
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 1.5rem 0;
+  }
+
   /* ── Footer text ── */
   .footer-content {
     max-width: 680px;
     margin: 0 auto;
-    padding: 9rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
   }
 
@@ -302,34 +307,41 @@
     will-change: opacity, transform, filter;
   }
 
-  .fc-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--yellow);
-    margin-bottom: 1.25rem;
-  }
-
+  /* Vertical divider: the wide line SVG rotated 90°, revealed on scroll */
   .fc-divider {
-    width: 1px;
-    height: 80px;
-    margin: 3.5rem auto;
-    background: linear-gradient(var(--yellow), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    margin: 2.5rem auto 0;
   }
 
-  .fc-credits {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    color: rgba(255,255,255,0.5);
-    line-height: 2;
-    will-change: opacity, transform, filter;
+  .fc-divider :global(.animated-svg) {
+    transform: rotate(90deg);
   }
 
   /* ── Closing shot ── */
   .mountain-footer { position: relative; height: 60vh; overflow: hidden; }
 
-  .mf-media { position: absolute; inset: 0; will-change: clip-path; }
+  .mf-media {
+    position: absolute; inset: 0;
+    will-change: clip-path;
+    /* Blend top and bottom edges into the background — 22% fade on each side */
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 50%,
+      black 50%,
+      transparent 100%
+    );
+    -webkit-mask-image: -webkit-linear-gradient(
+      top,
+      transparent 0%,
+      black 50%,
+      black 50%,
+      transparent 100%
+    );
+  }
 
   .mf-media img {
     width: 100%; height: 100%;
@@ -358,5 +370,15 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--yellow);
+  }
+
+  .title-close {
+    height: clamp(80px, 5vw, 180px);
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+    margin-bottom: 1.5rem;
+    display: block;
   }
 </style>

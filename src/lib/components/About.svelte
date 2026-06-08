@@ -185,7 +185,7 @@
       transparent 100%
     );
     -webkit-mask-image: -webkit-linear-gradient(
-      top,
+      to bottom,
       transparent 0%,
       black 50%,
       black 50%,
@@ -225,7 +225,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    -webkit-mask-image: -webkit-linear-gradient(to bottom, transparent 0%, black 100%);
     pointer-events: none;
   }
 
@@ -292,7 +292,7 @@
   }
 
   .concepto-headline {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
     line-height: 1.1;

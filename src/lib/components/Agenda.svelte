@@ -251,7 +251,7 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
       background: transparent;
       color: rgba(255, 255, 255, 0.7);
-      font-family: var(--font-heading);
+      font-family: var(--font-heading), sans-serif;
       font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.02em;

@@ -251,7 +251,7 @@
   .ov-caption {
     position: absolute;
     top: 2rem; left: 0; width: 100%;
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: 0.78rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -287,7 +287,7 @@
   }
 
   .ov-meta {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -329,19 +329,6 @@
     will-change: opacity, transform, filter;
   }
 
-  /* Vertical divider: the wide line SVG rotated 90°, revealed on scroll */
-  .fc-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 360px;
-    margin: 2.5rem auto 0;
-  }
-
-  .fc-divider :global(.animated-svg) {
-    transform: rotate(90deg);
-  }
-
   /* ── Closing shot ── */
   .mountain-footer { position: relative; height: 60vh; overflow: hidden; }
 
@@ -359,7 +346,7 @@
       transparent 100%
     );
     -webkit-mask-image: -webkit-linear-gradient(
-      top,
+      to bottom,
       transparent 0%,
       black 18%,
       black 82%,
@@ -398,7 +385,7 @@
   }
 
   .mf-time {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: clamp(1.6rem, 4.5vw, 2.75rem);
     letter-spacing: 0.08em;
     text-transform: uppercase;

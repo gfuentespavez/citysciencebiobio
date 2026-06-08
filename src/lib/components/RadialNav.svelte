@@ -192,7 +192,7 @@
     border: none;
     cursor: pointer;
     padding: 2px 4px;
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -236,7 +236,7 @@
     padding: 7px 14px;
     border-radius: var(--radius-full);
     white-space: nowrap;
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.08em;

@@ -72,7 +72,7 @@
       img: 'https://d26q11cgz8q0ri.cloudfront.net/2026/05/28170425/DataIS-Ckan.png',
       imgPos: '35% center',
       accent: '#ffcc05',
-      link: 'https://datascope.citylabbiobio.cl' // TODO: add project URL
+      link: 'https://datascope.citylabbiobio.cl'
     },
     {
       logo: 'https://d26q11cgz8q0ri.cloudfront.net/2026/06/04121425/community-scaled.png',
@@ -80,7 +80,7 @@
       name: '',
       img: 'https://d26q11cgz8q0ri.cloudfront.net/2026/05/28142449/Community-Scope-scaled.png',
       accent: '#ffcc05',
-      link: 'https://youtu.be/dXba2RFf41Qch' // TODO: add project URL
+      link: 'https://youtu.be/dXba2RFf41Qch'
     }
   ];
 </script>

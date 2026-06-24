@@ -35,8 +35,8 @@ export const dict = {
 
     streaming: {
       pill: '● Transmisión en vivo',
-      title: 'Sigue el evento en vivo',
-      description: 'Conecta con la transmisión en directo de City Science Biobío 2026 desde la Biblioteca Central de la Universidad de Concepción.'
+      title: 'Mira de nuevo el evento',
+      description: 'Conecta con el streaming de City Science Biobío 2026 desde la Biblioteca Central de la Universidad de Concepción.'
     },
 
     hub: {
@@ -179,8 +179,8 @@ export const dict = {
 
     streaming: {
       pill: '● Live stream',
-      title: 'Watch the event live',
-      description: 'Tune in to the live broadcast of City Science Biobío 2026 from the Central Library at Universidad de Concepción.'
+      title: 'Watch the event again',
+      description: 'Catch the City Science Biobío 2026 stream from the Central Library at Universidad de Concepción.'
     },
 
     hub: {
@@ -322,8 +322,8 @@ export const dict = {
 
     streaming: {
       pill: '● Live-Übertragung',
-      title: 'Verfolgen Sie das Event live',
-      description: 'Schalten Sie ein zur Live-Übertragung von City Science Biobío 2026 aus der Zentralbibliothek der Universidad de Concepción.'
+      title: 'Sehen Sie das Event erneut',
+      description: 'Sehen Sie sich den Stream von City Science Biobío 2026 aus der Zentralbibliothek der Universidad de Concepción an.'
     },
 
     hub: {

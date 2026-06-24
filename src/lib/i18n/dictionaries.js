@@ -17,7 +17,7 @@ export const dict = {
       nosotros: 'Nosotros',
       proyectos: 'Proyectos',
       masterclass: 'Masterclass',
-      agenda: 'Agenda',
+      galeria: 'Galería',
       aliados: 'Aliados',
       streaming: 'En Vivo',
       hub: 'Hub',
@@ -93,7 +93,7 @@ export const dict = {
           'En City Science Biobío presentará cómo la simulación de ciudad permite anticipar decisiones urbanas y diseñar territorios más sostenibles.'
         ],
         meta: '16 Jun · 2026 — Concepción, Chile',
-        linkLabel: 'Inscribirse en la Masterclass →'
+        linkLabel: 'Mira la masterclass acá →'
       },
       footerQuote:
         'Tecnología urbana con impacto: una mirada a cuatro años de innovación aplicada al Biobío, del MIT Media Lab a las plataformas de datos territoriales del CLBB.',
@@ -161,7 +161,7 @@ export const dict = {
       nosotros: 'About',
       proyectos: 'Projects',
       masterclass: 'Masterclass',
-      agenda: 'Agenda',
+      galeria: 'Gallery',
       aliados: 'Partners',
       streaming: 'Live',
       hub: 'Hub',
@@ -237,7 +237,7 @@ export const dict = {
           'At City Science Biobío, she will demonstrate how city simulation enables teams to anticipate the outcomes of planning decisions and design more resilient, sustainable territories.'
         ],
         meta: 'Jun 16 · 2026 — Concepción, Chile',
-        linkLabel: 'Register for the Masterclass →'
+        linkLabel: 'Watch the Masterclass here →'
       },
       footerQuote:
         'Urban technology with impact: four years of applied innovation in Biobío — from the MIT Media Lab to CLBB\'s suite of territorial data platforms.',
@@ -304,7 +304,7 @@ export const dict = {
       nosotros: 'Über uns',
       proyectos: 'Projekte',
       masterclass: 'Masterclass',
-      agenda: 'Programm',
+      galeria: 'Galerie',
       aliados: 'Partner',
       streaming: 'Live',
       hub: 'Hub',
@@ -380,7 +380,7 @@ export const dict = {
           'Bei City Science Biobío präsentiert sie, wie Stadtsimulation Teams in die Lage versetzt, die Folgen von Planungsentscheidungen vorauszudenken und widerstandsfähigere, lebenswertere Stadtgebiete zu entwickeln.'
         ],
         meta: '16. Juni · 2026 — Concepción, Chile',
-        linkLabel: 'Zur Masterclass anmelden →'
+        linkLabel: 'Masterclass hier ansehen →'
       },
       footerQuote:
         'Urbane Technologie mit Wirkung: Vier Jahre angewandte Stadtforschung in Biobío — vom MIT Media Lab bis zu den raumbezogenen Datenplattformen des CLBB.',
@@ -389,7 +389,7 @@ export const dict = {
     },
 
     gallery: {
-      sectionLabel: '● Galerie',
+      sectionLabel: 'Galerie',
       titleHtml: 'Vier Jahre<br/>in Bildern',
       intro: 'Ein visueller Rundgang durch die City Science Biobío Expo.'
     },
